@@ -19,13 +19,13 @@ public class Reservation {
     private String status = "created";
 
     @ManyToOne
-    @JoinColumn(name="libId")
-    @JsonIgnoreProperties({"reservations","messages"})
-    private Library lib;
+    @JoinColumn(name = "audienceId")
+    @JsonIgnoreProperties({"reservations"})
+    private Audience audience;
 
     @ManyToOne
-    @JoinColumn(name="clientId")
-    @JsonIgnoreProperties({"reservations","messages"})
+    @JoinColumn(name = "clientId")
+    @JsonIgnoreProperties({"reservations", "messages"})
     private Client client;
 
 
@@ -65,12 +65,12 @@ public class Reservation {
         this.status = status;
     }
 
-    public Library getLib() {
-        return lib;
+    public Audience getAudience() {
+        return audience;
     }
 
-    public void setLib(Library lib) {
-        this.lib = lib;
+    public void setAudience(Audience audience) {
+        this.audience = audience;
     }
 
     public Client getClient() {
@@ -89,3 +89,5 @@ public class Reservation {
         this.score = score;
     }
 }
+
+

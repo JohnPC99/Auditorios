@@ -14,9 +14,9 @@ public class Message {
     private String messageText;
 
     @ManyToOne
-    @JoinColumn(name="libId")
+    @JoinColumn(name="audienceId")
     @JsonIgnoreProperties({"messages","reservations"})
-    private Library lib;
+    private Audience audience;
 
 
     @ManyToOne
@@ -40,12 +40,12 @@ public class Message {
         this.messageText = messageText;
     }
 
-    public Library getLib() {
-        return lib;
+    public Audience getAudience() {
+        return audience;
     }
 
-    public void setLib(Library lib) {
-        this.lib = lib;
+    public void setAudience(Audience audience) {
+        this.audience = audience;
     }
 
     public Client getClient() {

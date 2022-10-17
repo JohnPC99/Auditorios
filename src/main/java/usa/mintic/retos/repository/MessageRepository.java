@@ -2,7 +2,7 @@ package usa.mintic.retos.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import usa.mintic.retos.entity.Library;
+import usa.mintic.retos.entity.Audience;
 import usa.mintic.retos.entity.Message;
 import usa.mintic.retos.repository.crud.MessageCrudRepository;
 
